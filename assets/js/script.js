@@ -34,3 +34,13 @@ function timeUpdate() {
 };
 
 timeUpdate();
+
+
+//when save is selected - Text saved to localstorage
+
+$(".saveBtn").on("click", function () {
+    var descr = $(this).siblings(".description").val();
+    var hour = $(this).siblings(".hour").text();
+
+    localStorage.setItem(hour, descr);
+})
